@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  serverAdress: "https://epicode.online/epicodebeservice_v2/",
+  serverAdress: "http://epicode.online/epicodebeservice_v2/",
 };
 
 /*

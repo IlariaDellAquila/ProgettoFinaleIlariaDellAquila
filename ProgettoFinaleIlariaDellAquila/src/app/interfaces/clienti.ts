@@ -1,5 +1,7 @@
+import { Cliente } from "../classes/cliente";
+
 export interface Clienti {
-    content: Array<Clienti>,
+    content: Array<Cliente>,
     pageable: Object,
     last: Boolean,
     totalPages: number,

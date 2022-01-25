@@ -1,9 +1,33 @@
-<div class="card">
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-      <a href="#" class="card-link">Card link</a>
-      <a href="#" class="card-link">Another link</a>
-    </div>
+<div class="card my-3">
+  <div class="card-header">
+    <h3>{{cliente.nomeContatto}} {{cliente.cognomeContatto}}</h3>
   </div>
+  <div class="card-body">
+    <h5 class="card-title">Ragione sociale: {{cliente.ragioneSociale}}</h5>
+    <h6 class="card-subtitle mb-2 text-muted">P.IVA: {{cliente.partitaIva}}</h6>
+    <p class="card-text">Tipo cliente: {{cliente.tipoCliente}}</p>
+    <p class="card-text">Email: {{cliente.email}}</p>
+    <p class="card-text">Pec: {{cliente.pec}}</p>
+    <p class="card-text">Telefono: {{cliente.telefono}}</p>
+    <p class="card-text">Telefono contatto: {{cliente.telefonoContatto}}</p>
+    <p class="card-text">Email Contatto: {{cliente.emailContatto}}</p>
+    <h5 class="card-title">Sede Operativa</h5>
+    <p class="card-text">Via: {{cliente.indirizzoSedeOperativa.via}}</p>
+    <p class="card-text">Civico: {{cliente.indirizzoSedeOperativa.civico}}</p>
+    <p class="card-text">CAP: {{cliente.indirizzoSedeOperativa.cap}}</p>
+    <p class="card-text">Località: {{cliente.indirizzoSedeOperativa.localita}}</p>
+    <p class="card-text">Comune: {{cliente.indirizzoSedeOperativa.comune.nome}}</p>
+    <p class="card-text">Provincia: {{cliente.indirizzoSedeOperativa.comune.provincia.nome}}</p>
+    <p class="card-text">Sigla: {{cliente.indirizzoSedeOperativa.comune.provincia.sigla}}</p>
+    <h5 class="card-title">Sede Legale</h5>
+    <p class="card-text">Via: {{cliente.indirizzoSedeLegale.via}}</p>
+    <p class="card-text">Civico: {{cliente.indirizzoSedeLegale.civico}}</p>
+    <p class="card-text">CAP: {{cliente.indirizzoSedeLegale.cap}}</p>
+    <p class="card-text">Località: {{cliente.indirizzoSedeLegale.localita}}</p>
+    <p class="card-text">Comune: {{cliente.indirizzoSedeLegale.comune.nome}}</p>
+    <p class="card-text">Provincia: {{cliente.indirizzoSedeLegale.comune.provincia.nome}}</p>
+    <p class="card-text">Sigla: {{cliente.indirizzoSedeLegale.comune.provincia.sigla}}</p>
+    
+    <button type="button" class="form-control btn btn-secondary"(click)="modifica(cliente)">Modifica</button>
+  </div>
+</div>

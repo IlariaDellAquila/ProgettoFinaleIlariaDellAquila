@@ -1,4 +1,6 @@
-<table class="table table-striped">
+<div class="my-3">
+<h3 class="text-center">Lista Clienti</h3>
+<table class="table table-striped mt-3">
     <thead>
     <tr>
       <th scope="col">#</th>
@@ -8,20 +10,24 @@
       <th scope="col">Email</th>
       <th scope="col">Ragione Sociale</th>
       <th scope="col"></th>
+      <th scope="col"></th>
     </tr>
     </thead>
     <tbody>
-    <tr >
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
+    <tr *ngFor="let item of cliente; index as i">
+        <td>{{i + 1}}</td>
+        <td>{{item.nomeContatto}}</td>
+        <td>{{item.cognomeContatto}}</td>
+        <td>{{item.telefonoContatto}}</td>
+        <td>{{item.emailContatto}}</td>
+        <td>{{item.ragioneSociale}}</td>
         <td>
-            <button type="button" class="btn btn-danger btn-sm mx-1">x</button>
-            <button type="button" class="btn btn-warning btn-sm mx-1">i</button>
-        </td>
+            <button type="button" class="btn btn-danger btn-sm "(click)="remove(item)"><i class="bi bi-trash-fill"></i></button>
+        </td> 
+        <td>  
+            <button type="button" class="btn btn-primary btn-sm " (click)="detailClinte(item)"><i class="bi bi-person-lines-fill"></i></button>
+        </td> 
     </tr>
     </tbody>
 </table>
+</div>

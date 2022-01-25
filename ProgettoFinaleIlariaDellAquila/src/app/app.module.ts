@@ -8,9 +8,12 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { TableClientiComponent } from './table-clienti/table-clienti.component';
 import { FormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { HomeComponent } from './home/home.component';
 import { DettagliClientiComponent } from './dettagli-clienti/dettagli-clienti.component';
+import { HttpInterceptorInterceptor } from './http-interceptor.interceptor';
+import { AddClientiComponent } from './add-clienti/add-clienti.component';
+import { ModificaComponent } from './modifica/modifica.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +22,9 @@ import { DettagliClientiComponent } from './dettagli-clienti/dettagli-clienti.co
     FooterComponent,
     TableClientiComponent,
     HomeComponent,
-    DettagliClientiComponent
+    DettagliClientiComponent,
+    AddClientiComponent,
+    ModificaComponent
   ],
   imports: [
     BrowserModule,
@@ -28,7 +33,11 @@ import { DettagliClientiComponent } from './dettagli-clienti/dettagli-clienti.co
     FormsModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [{
+    provide: HTTP_INTERCEPTORS,
+    useClass: HttpInterceptorInterceptor,
+    multi: true,
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,3 +1,6 @@
+import { IndirizzoSedeLegale } from "./indirizzo-sede-legale";
+import { IndirizzoSedeOperativa } from "./indirizzo-sede-operativa";
+
 export class Cliente{
     id!: number;
     ragioneSociale!: string;
@@ -10,8 +13,8 @@ export class Cliente{
     cognomeContatto!: string;
     telefonoContatto!: string;
     emailContatto!: string;
-    indirizzoSedeOperativa!: Object;
-    indirizzoSedeLegale!:Object;
+    indirizzoSedeOperativa!: IndirizzoSedeOperativa;
+    indirizzoSedeLegale!:IndirizzoSedeLegale;
     dataInserimento!: string;
     dataUltimoContatto!: string;
     fatturatoAnnuale!: number;
