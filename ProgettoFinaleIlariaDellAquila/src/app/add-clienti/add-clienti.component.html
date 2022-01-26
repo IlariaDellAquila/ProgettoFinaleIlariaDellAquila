@@ -122,6 +122,11 @@
                     <input type="text" [(ngModel)]="cliente.dataInserimento" name="nome" class="form-control"
                         placeholder="Es: 2019-06-01T08:11:01.911+00:00">
                 </div>
+                <div class="mb-3">
+                    <label class="form-label">Data Ultimo Insierimento</label>
+                    <input type="text" [(ngModel)]="cliente.dataUltimoContatto" name="nome" class="form-control"
+                        placeholder="Es: 2019-06-01T08:11:01.911+00:00">
+                </div>
 
                 <button type="button" class="form-control btn btn-secondary" (click)="addCliente()">Aggiungi</button>
             </div>

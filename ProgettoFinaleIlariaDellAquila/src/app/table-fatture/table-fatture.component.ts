@@ -20,4 +20,16 @@ export class TableFattureComponent implements OnInit {
     }) 
   }
 
+  dettagli(item: Fattura){
+    this.router.navigate(['fatture', item.id, 'dettagli'])
+
+  }
+
+  removeFattura(item: Fattura){
+    this.fattureService.removeFattura(item).subscribe(data => {
+      this.fattura = this.fattura.filter(ele => ele !== item);
+    })
+
+  }
+
 }

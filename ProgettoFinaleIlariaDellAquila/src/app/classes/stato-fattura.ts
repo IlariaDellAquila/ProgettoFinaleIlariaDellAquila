@@ -1,5 +1,5 @@
 export class StatoFattura {
-        id!: number;
+        id?: number;
         nome!: string;
 
 }
