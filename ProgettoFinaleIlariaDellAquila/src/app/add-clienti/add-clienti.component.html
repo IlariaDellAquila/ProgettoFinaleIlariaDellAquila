@@ -13,12 +13,12 @@
         </div>
         <div class="mb-3">
             <label class="form-label">Telefono Cliente</label>
-            <input type="number" [(ngModel)]="cliente.telefonoContatto" name="telefono" class="form-control"
+            <input type="text" [(ngModel)]="cliente.telefonoContatto" name="telefono" class="form-control"
                 placeholder="Es: (+39)1122334455">
         </div>
         <div class="mb-3">
             <label class="form-label">Email Cliente</label>
-            <input type="email" [(ngModel)]="cliente.emailContatto" name="email" class="form-control"
+            <input type="text" [(ngModel)]="cliente.emailContatto" name="email" class="form-control"
                 placeholder="Es: mariorossi@gmail.com">
         </div>
         <div class="mb-3">
@@ -34,22 +34,22 @@
         <div class="mb-3">
             <label class="form-label">Tipo Cliente</label>
             <select [(ngModel)]="cliente.tipoCliente" name="tipoCliente" class="mx-3">
-                <option [ngValue]="item" *ngFor="let item of tipiClienti">{{item}}</option>
+                <option [ngValue]="item" *ngFor="let item of tipoCliente">{{item}}</option>
             </select>
         </div>
         <div class="mb-3">
             <label class="form-label">Email</label>
-            <input type="email" [(ngModel)]="cliente.email" name="email" class="form-control"
+            <input type="text" [(ngModel)]="cliente.email" name="email" class="form-control"
                 placeholder="Es: fatturamica@gmail.com">
         </div>
         <div class="mb-3">
             <label class="form-label">PEC</label>
-            <input type="email" [(ngModel)]="cliente.pec" name="pec" class="form-control"
+            <input type="text" [(ngModel)]="cliente.pec" name="pec" class="form-control"
                 placeholder="Es: fatturamica@pec.it">
         </div>
         <div class="mb-3">
             <label class="form-label">Telefono</label>
-            <input type="number" [(ngModel)]="cliente.telefono" name="telefono" class="form-control"
+            <input type="text" [(ngModel)]="cliente.telefono" name="telefono" class="form-control"
                 placeholder="Es: (+39)1122334455">
         </div>
         <div class="mb-3">
@@ -57,103 +57,73 @@
             <div class="row ">
                 <div class="col-sm">
                     <label class="form-label">Via</label>
-                    <input type="text" [(ngModel)]="cliente.indirizzoSedeOperativa.via" name="via" class="form-control"
-                        placeholder="Via">
+                    <input type="text" [(ngModel)]="cliente.indirizzoSedeOperativa.via"
+                        name="via_indirizzo_sede_operativa" class="form-control" placeholder="Via">
                 </div>
 
 
-            <div class="col-sm">
-                <label class="form-label">N. civico</label>
-                <input type="number" [(ngModel)]="cliente.indirizzoSedeOperativa.civico" name="civico"
-                    class="form-control" placeholder="n">
-            </div>
-            <div class="col-sm">
-                <label class="form-label">CAP</label>
-                <input type="number" [(ngModel)]="cliente.indirizzoSedeOperativa.cap" name="cap" class="form-control"
-                    placeholder="CAP">
-            </div>
-            <div class="col-sm">
-                <label class="form-label">Località</label>
-                <input type="text" [(ngModel)]="cliente.indirizzoSedeOperativa.localita" name="localita"
-                    class="form-control" placeholder="Loc">
-            </div>
-
-
-            <div class="col-sm">
-                <label class="form-label">Comune</label>
-                <input type="text" [(ngModel)]="cliente.indirizzoSedeOperativa.comune.nome" name="nome"
-                    class="form-control" placeholder="Comune">
-            </div>
-
-            <div class="col-sm">
-                <label class="form-label">Provincia</label>
-                <input type="text" [(ngModel)]="cliente.indirizzoSedeOperativa.comune.provincia.nome" name="nome"
-                    class="form-control" placeholder="Prov">
-            </div>
-            <div class="col-sm">
-                <label class="form-label">Sigla</label>
-                <input type="text" [(ngModel)]="cliente.indirizzoSedeOperativa.comune.provincia.sigla" name="sigla"
-                    class="form-control" placeholder="Sigla">
-            </div>
-            </div>
-            <div class="mb-3">
-                <h6 class="mt-3">Sede Legale</h6>
-                <div class="row ">
-                    <div class="col-sm">
-                        <label class="form-label">Via</label>
-                        <input type="text" [(ngModel)]="cliente.indirizzoSedeLegale.via" name="via" class="form-control"
-                            placeholder="Via">
-                    </div>
-                    <div class="col-sm">
-                        <label class="form-label">N. civico</label>
-                        <input type="number" [(ngModel)]="cliente.indirizzoSedeLegale.civico" name="civico"
-                            class="form-control" placeholder="n">
-                    </div>
-                    <div class="col-sm">
-                        <label class="form-label">CAP</label>
-                        <input type="number" [(ngModel)]="cliente.indirizzoSedeLegale.cap" name="cap"
-                            class="form-control" placeholder="CAP">
-                    </div>
-                    <div class="col-sm">
-                        <label class="form-label">Località</label>
-                        <input type="text" [(ngModel)]="cliente.indirizzoSedeLegale.localita" name="localita"
-                            class="form-control" placeholder="Loc">
-                    </div>
-                    <div class="col-sm">
-                        <label class="form-label">Comune</label>
-                        <input type="text" [(ngModel)]="cliente.indirizzoSedeLegale.comune.nome" name="nome"
-                            class="form-control" placeholder="Comune">
-                    </div>
-                    <div class="col-sm">
-                        <label class="form-label">Provincia</label>
-                        <input type="text" [(ngModel)]="cliente.indirizzoSedeLegale.comune.provincia.nome" name="nome"
-                            class="form-control" placeholder="Prov">
-                    </div>
-                    <div class="col-sm">
-                        <label class="form-label">Sigla</label>
-                        <input type="text" [(ngModel)]="cliente.indirizzoSedeLegale.comune.provincia.sigla" name="sigla"
-                            class="form-control" placeholder="Sigla">
-                    </div>
+                <div class="col-sm">
+                    <label class="form-label">N. civico</label>
+                    <input type="text" [(ngModel)]="cliente.indirizzoSedeOperativa.civico" name="civico"
+                        class="form-control" placeholder="n">
+                </div>
+                <div class="col-sm">
+                    <label class="form-label">CAP</label>
+                    <input type="text" [(ngModel)]="cliente.indirizzoSedeOperativa.cap" name="cap"
+                        class="form-control" placeholder="CAP">
+                </div>
+                <div class="col-sm">
+                    <label class="form-label">Località</label>
+                    <input type="text" [(ngModel)]="cliente.indirizzoSedeOperativa.localita" name="localita"
+                        class="form-control" placeholder="Loc">
+                </div>
+                <div class="col-sm">
+                    <label class="form-label">Comune</label>
+                    <select class="form-select" [(ngModel)]="cliente.indirizzoSedeOperativa.comune"
+                        name="nome_comune_SedeOperativa" class="mx-3">
+                        <option [ngValue]="item" *ngFor="let item of comuni">{{item.nome}}</option>
+                    </select>
                 </div>
             </div>
-            <div class="mb-3">
-                <label class="form-label">Data Inserimento</label>
-                <input type="data" [(ngModel)]="cliente.dataInserimento" name="nome" class="form-control"
-                    placeholder="Es: 2019-06-01T08:11:01.911+00:00">
-            </div>
-            <div class="mb-3">
-                <label class="form-label">Data Ultimo Contatto</label>
-                <input type="data" [(ngModel)]="cliente.dataUltimoContatto" name="nome" class="form-control"
-                    placeholder="Es: 2019-06-01T08:11:01.911+00:00">
-            </div>
-            <div class="mb-3">
-                <label class="form-label">Fattura Annuale</label>
-                <input type="number" [(ngModel)]="cliente.fatturatoAnnuale" name="nome" class="form-control"
-                    placeholder="Es: 545454">
-            </div>
+                <div class="mb-3">
+                    <h6 class="mt-3">Sede Legale</h6>
+                    <div class="row ">
+                        <div class="col-sm">
+                            <label class="form-label">Via</label>
+                            <input type="text" [(ngModel)]="cliente.indirizzoSedeLegale.via" name="via"
+                                class="form-control" placeholder="Via">
+                        </div>
+                        <div class="col-sm">
+                            <label class="form-label">N. civico</label>
+                            <input type="text" [(ngModel)]="cliente.indirizzoSedeLegale.civico" name="civico"
+                                class="form-control" placeholder="n">
+                        </div>
+                        <div class="col-sm">
+                            <label class="form-label">CAP</label>
+                            <input type="text" [(ngModel)]="cliente.indirizzoSedeLegale.cap" name="cap"
+                                class="form-control" placeholder="CAP">
+                        </div>
+                        <div class="col-sm">
+                            <label class="form-label">Località</label>
+                            <input type="text" [(ngModel)]="cliente.indirizzoSedeLegale.localita" name="localita"
+                                class="form-control" placeholder="Loc">
+                        </div>
+                        <div class="col-sm">
+                            <label class="form-label">Comune</label>
+                            <select class="form-select" [(ngModel)]="cliente.indirizzoSedeLegale.comune"
+                                name="nome_comune_SedeLegale" class="mx-3">
+                                <option [ngValue]="item" *ngFor="let item of comuni">{{item.nome}}</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Data Inserimento</label>
+                    <input type="text" [(ngModel)]="cliente.dataInserimento" name="nome" class="form-control"
+                        placeholder="Es: 2019-06-01T08:11:01.911+00:00">
+                </div>
 
-
-            <button type="button" class="form-control btn btn-secondary" (click)="addCliente()">Aggiungi</button>
-        </div>
+                <button type="button" class="form-control btn btn-secondary" (click)="addCliente()">Aggiungi</button>
+            </div>
     </form>
 </div>

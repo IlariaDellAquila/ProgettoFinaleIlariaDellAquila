@@ -2,7 +2,7 @@ import { IndirizzoSedeLegale } from "./indirizzo-sede-legale";
 import { IndirizzoSedeOperativa } from "./indirizzo-sede-operativa";
 
 export class Cliente{
-    id!: number;
+    id?: number;
     ragioneSociale!: string;
     partitaIva!: string;
     tipoCliente!: string;
@@ -15,7 +15,12 @@ export class Cliente{
     emailContatto!: string;
     indirizzoSedeOperativa!: IndirizzoSedeOperativa;
     indirizzoSedeLegale!:IndirizzoSedeLegale;
-    dataInserimento!: string;
-    dataUltimoContatto!: string;
-    fatturatoAnnuale!: number;
+    dataInserimento?: string;
+    dataUltimoContatto?: string;
+    fatturatoAnnuale?: number;
+
+    constructor() {
+        this.indirizzoSedeOperativa = new IndirizzoSedeOperativa();
+        this.indirizzoSedeLegale = new IndirizzoSedeLegale();
+    }
 }

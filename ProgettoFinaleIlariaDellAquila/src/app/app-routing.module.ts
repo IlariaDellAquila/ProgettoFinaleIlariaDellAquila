@@ -5,6 +5,7 @@ import { DettagliClientiComponent } from './dettagli-clienti/dettagli-clienti.co
 import { HomeComponent } from './home/home.component';
 import { ModificaComponent } from './modifica/modifica.component';
 import { TableClientiComponent } from './table-clienti/table-clienti.component';
+import { TableFattureComponent } from './table-fatture/table-fatture.component';
 
 const routes: Routes = [
   {
@@ -26,6 +27,10 @@ const routes: Routes = [
   {
     path:'clienti/:id/modifica',
     component: ModificaComponent
+  },
+  {
+    path:'fatture',
+    component: TableFattureComponent
   },
 ];
 

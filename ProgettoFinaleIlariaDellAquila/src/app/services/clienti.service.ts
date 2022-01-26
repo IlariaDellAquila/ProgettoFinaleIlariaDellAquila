@@ -1,9 +1,11 @@
 import { HttpClient } from '@angular/common/http';
-import { identifierName } from '@angular/compiler';
 import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment';
 import { Cliente } from '../classes/cliente';
+import { Comune } from '../classes/comune';
 import { Clienti } from '../interfaces/clienti';
+import { Comuni } from '../interfaces/comuni';
+import { Province } from '../interfaces/province';
 
 @Injectable({
   providedIn: 'root'
@@ -43,4 +45,9 @@ export class ClientiService {
   removeCliente(cliente: Cliente) {
     return this.http.delete(environment.serverAdress + 'api/clienti/' + cliente.id)
   }
+
+  getAllComuni() {
+    return this.http.get<Comuni>(environment.serverAdress + 'api/comuni?page=0&size=20&sort=id,ASC')
+  }
+
 }

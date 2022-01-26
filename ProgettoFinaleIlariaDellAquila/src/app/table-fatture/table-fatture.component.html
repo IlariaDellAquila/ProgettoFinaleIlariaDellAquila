@@ -1,0 +1,31 @@
+<div class="my-3">
+    <h3 class="text-center">Lista Fatture</h3>
+    <table class="table table-striped mt-3">
+        <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Data</th>
+          <th scope="col">Numero </th>
+          <th scope="col">Anno</th>
+          <th scope="col">Importo</th>
+          <th scope="col"></th>
+          <th scope="col"></th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let item of fattura" >
+            <td>{{item.id}}</td>
+            <td>{{item.data}}</td>
+            <td>{{item.numero}}</td>
+            <td>{{item.anno}}</td>
+            <td>{{item.importo}}</td>
+            <td>
+                <button type="button" class="btn btn-danger btn-sm "><i class="bi bi-trash-fill"></i></button>
+            </td> 
+            <td>  
+                <button type="button" class="btn btn-primary btn-sm " ><i class="bi bi-person-lines-fill"></i></button>
+            </td> 
+        </tr>
+        </tbody>
+    </table>
+    </div>

@@ -14,8 +14,8 @@
     </tr>
     </thead>
     <tbody>
-    <tr *ngFor="let item of cliente; index as i">
-        <td>{{i + 1}}</td>
+    <tr *ngFor="let item of cliente">
+        <td>{{item.id}}</td>
         <td>{{item.nomeContatto}}</td>
         <td>{{item.cognomeContatto}}</td>
         <td>{{item.telefonoContatto}}</td>

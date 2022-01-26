@@ -7,4 +7,8 @@ export class IndirizzoSedeLegale {
     cap!: string;
     localita!: string;
     comune!: Comune;
+
+    constructor() {
+        this.comune = new Comune()
+    }
 }
