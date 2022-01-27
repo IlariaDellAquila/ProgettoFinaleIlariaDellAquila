@@ -1,0 +1,28 @@
+<div class="my-3">
+    <h3 class="text-center">Aggiungi fattura</h3>
+    <form>
+        <div class="mb-3">
+            <label  class="form-label">Numero fattura</label>
+            <input type="number" [(ngModel)]="fattura.numero" name="numero_fattura" class="form-control"  placeholder="Numero fattura">
+        </div>
+        <div class="mb-3">
+            <label  class="form-label">Importo</label>
+            <input type="number" [(ngModel)]="fattura.importo" name="importo_fattura" class="form-control"  placeholder="Importo">
+        </div>
+        <div class="mb-3">
+            <label  class="form-label">Data</label>
+            <input type="text" [(ngModel)]="fattura.data" name="data_fattura" class="form-control"  placeholder="Data">
+        </div>
+        <div class="mb-3">
+            <label  class="form-label">Anno</label>
+            <input type="number" [(ngModel)]="fattura.anno"  name="anno_fattura" class="form-control"  placeholder="Anno">
+        </div>
+        <div class="mb-3">
+            <label  class="form-label mx-2">Stato</label>
+            <select class="form-select" [(ngModel)]="fattura.stato.nome" name="stato_fattura" >
+                <option value="1"></option>
+              </select>
+        </div>
+        <button type="button" class="form-control btn btn-secondary" (click)="addFattura()" >Aggiungi</button>
+    </form>
+</div>

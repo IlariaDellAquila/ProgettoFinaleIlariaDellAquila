@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment';
 import { Cliente } from '../classes/cliente';
 import { Comune } from '../classes/comune';
+import { Provincia } from '../classes/provincia';
 import { Clienti } from '../interfaces/clienti';
 import { Comuni } from '../interfaces/comuni';
 import { Province } from '../interfaces/province';
@@ -47,7 +48,17 @@ export class ClientiService {
   }
 
   getAllComuni() {
-    return this.http.get<Comuni>(environment.serverAdress + 'api/comuni?page=0&size=20&sort=id,ASC')
+    return this.http.get<Comuni>(environment.serverAdress + 'api/comuni?page=0&size=20&sort=id,DESC')
+  }
+  getAllProvince() {
+    return this.http.get<Province>(environment.serverAdress + 'api/province?page=0&size=20&sort=id,DESC')
+  }
+
+  createComune(comune: Comune){
+    return this.http.post<Comune>(environment.serverAdress + 'api/comuni', comune)
+  }
+  createProvincia(provincia: Provincia){
+    return this.http.post<Provincia>(environment.serverAdress + 'api/province', provincia)
   }
 
 }

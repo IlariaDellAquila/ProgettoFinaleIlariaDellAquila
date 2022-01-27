@@ -24,4 +24,12 @@ export class DettagliClientiComponent implements OnInit {
     this.router.navigate(['clienti', cliente.id, 'modifica']);
   }
 
+  aggiungiFattura(cliente: Cliente) {
+    this.router.navigate(['clienti', cliente.id, 'aggiungiFatture']);
+  }
+
+  fattureCliente(cliente : Cliente) {
+    this.router.navigate(['cliente', cliente.id, 'fattureCliente']);
+  }
+
 }

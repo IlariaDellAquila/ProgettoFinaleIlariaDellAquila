@@ -69,8 +69,8 @@
                 </div>
                 <div class="col-sm">
                     <label class="form-label">CAP</label>
-                    <input type="text" [(ngModel)]="cliente.indirizzoSedeOperativa.cap" name="cap"
-                        class="form-control" placeholder="CAP">
+                    <input type="text" [(ngModel)]="cliente.indirizzoSedeOperativa.cap" name="cap" class="form-control"
+                        placeholder="CAP">
                 </div>
                 <div class="col-sm">
                     <label class="form-label">Località</label>
@@ -85,50 +85,50 @@
                     </select>
                 </div>
             </div>
-                <div class="mb-3">
-                    <h6 class="mt-3">Sede Legale</h6>
-                    <div class="row ">
-                        <div class="col-sm">
-                            <label class="form-label">Via</label>
-                            <input type="text" [(ngModel)]="cliente.indirizzoSedeLegale.via" name="via"
-                                class="form-control" placeholder="Via">
-                        </div>
-                        <div class="col-sm">
-                            <label class="form-label">N. civico</label>
-                            <input type="text" [(ngModel)]="cliente.indirizzoSedeLegale.civico" name="civico"
-                                class="form-control" placeholder="n">
-                        </div>
-                        <div class="col-sm">
-                            <label class="form-label">CAP</label>
-                            <input type="text" [(ngModel)]="cliente.indirizzoSedeLegale.cap" name="cap"
-                                class="form-control" placeholder="CAP">
-                        </div>
-                        <div class="col-sm">
-                            <label class="form-label">Località</label>
-                            <input type="text" [(ngModel)]="cliente.indirizzoSedeLegale.localita" name="localita"
-                                class="form-control" placeholder="Loc">
-                        </div>
-                        <div class="col-sm">
-                            <label class="form-label">Comune</label>
-                            <select class="form-select" [(ngModel)]="cliente.indirizzoSedeLegale.comune"
-                                name="nome_comune_SedeLegale" class="mx-3">
-                                <option [ngValue]="item" *ngFor="let item of comuni">{{item.nome}}</option>
-                            </select>
-                        </div>
+            <div class="mb-3">
+                <h6 class="mt-3">Sede Legale</h6>
+                <div class="row ">
+                    <div class="col-sm">
+                        <label class="form-label">Via</label>
+                        <input type="text" [(ngModel)]="cliente.indirizzoSedeLegale.via" name="via" class="form-control"
+                            placeholder="Via">
+                    </div>
+                    <div class="col-sm">
+                        <label class="form-label">N. civico</label>
+                        <input type="text" [(ngModel)]="cliente.indirizzoSedeLegale.civico" name="civico"
+                            class="form-control" placeholder="n">
+                    </div>
+                    <div class="col-sm">
+                        <label class="form-label">CAP</label>
+                        <input type="text" [(ngModel)]="cliente.indirizzoSedeLegale.cap" name="cap" class="form-control"
+                            placeholder="CAP">
+                    </div>
+                    <div class="col-sm">
+                        <label class="form-label">Località</label>
+                        <input type="text" [(ngModel)]="cliente.indirizzoSedeLegale.localita" name="localita"
+                            class="form-control" placeholder="Loc">
+                    </div>
+                    <div class="col-sm">
+                        <label class="form-label">Comune</label>
+                        <select class="form-select" [(ngModel)]="cliente.indirizzoSedeLegale.comune"
+                            name="nome_comune_SedeLegale" class="mx-3">
+                            <option [ngValue]="item" *ngFor="let item of comuni">{{item.nome}}</option>
+                        </select>
                     </div>
                 </div>
-                <div class="mb-3">
-                    <label class="form-label">Data Inserimento</label>
-                    <input type="text" [(ngModel)]="cliente.dataInserimento" name="nome" class="form-control"
-                        placeholder="Es: 2019-06-01T08:11:01.911+00:00">
-                </div>
-                <div class="mb-3">
-                    <label class="form-label">Data Ultimo Insierimento</label>
-                    <input type="text" [(ngModel)]="cliente.dataUltimoContatto" name="nome" class="form-control"
-                        placeholder="Es: 2019-06-01T08:11:01.911+00:00">
-                </div>
-
-                <button type="button" class="form-control btn btn-secondary" (click)="addCliente()">Aggiungi</button>
             </div>
+            <div class="mb-3">
+                <label class="form-label">Data Inserimento</label>
+                <input type="text" [(ngModel)]="cliente.dataInserimento" name="nome" class="form-control"
+                    placeholder="Es: 2019-06-01T08:11:01.911+00:00">
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Data Ultimo Insierimento</label>
+                <input type="text" [(ngModel)]="cliente.dataUltimoContatto" name="nome" class="form-control"
+                    placeholder="Es: 2019-06-01T08:11:01.911+00:00">
+            </div>
+
+            <button type="button" class="form-control btn btn-secondary" (click)="addCliente()">Aggiungi</button>
+        </div>
     </form>
 </div>
