@@ -63,7 +63,7 @@ export class ClientiService {
     return this.http.post<Provincia>(environment.serverAdress + 'api/province', provincia)
   }
   
-  getByCliente(id: number) {
-    return this.http.get<Fatture>(environment.serverAdress + 'api/fatture/cliente/'+ id +'?page=0&size=20&sort=id,DESC')
+  getByCliente(cliente: Cliente) {
+    return this.http.get<Fatture>(environment.serverAdress + 'api/fatture/cliente/'+ cliente.id +'?page=0&size=20&sort=id,DESC')
     }
 }

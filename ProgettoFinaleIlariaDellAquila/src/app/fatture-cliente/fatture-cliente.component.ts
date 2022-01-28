@@ -16,15 +16,15 @@ export class FattureClienteComponent implements OnInit {
   constructor(private clientiService: ClientiService, private route: ActivatedRoute, private router: Router) { }
 
   ngOnInit(): void {
-    this.route.params.subscribe(data => {
-      this.clientiService.getClienteById(data[('id')]).subscribe(response => this.cliente = response);    
-    });
+    this.route.params.subscribe(data=> {
+      this.cliente.id = data['id']; 
+       })
 
 
-  /* this.clientiService.getByCliente(this.cliente).subscribe(data => {
+   this.clientiService.getByCliente(this.cliente).subscribe(data => {
       this.fattura = data.content;
-      console.log(data.content)
+      console.log(data)
 
-    }) */
+    }) 
   }
 }
