@@ -32,8 +32,8 @@ export class AddFattureComponent implements OnInit {
    this.fattura.data = "2019-07-31T16:09:43.763+00:00";
    this.fattura.stato.id = 2;
    this.fattura.stato.nome = "NON PAGATA";
-    this.fattureService.createFattura(this.fattura).subscribe();
-    this.router.navigate(['fatture']);
+   this.fattureService.createFattura(this.fattura).subscribe();
+   this.router.navigate(['fatture']);
   }
 
 }
