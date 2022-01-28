@@ -20,6 +20,7 @@ export class FattureClienteComponent implements OnInit {
       this.cliente.id = data['id']; 
        })
 
+      
 
    this.clientiService.getByCliente(this.cliente).subscribe(data => {
       this.fattura = data.content;
