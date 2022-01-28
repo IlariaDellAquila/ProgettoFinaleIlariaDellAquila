@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
+import { Cliente } from '../classes/cliente';
+import { Fattura } from '../classes/fattura';
+import { ClientiService } from '../services/clienti.service';
 
 @Component({
   selector: 'app-fatture-cliente',
@@ -6,10 +10,21 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./fatture-cliente.component.css']
 })
 export class FattureClienteComponent implements OnInit {
-
-  constructor() { }
+ 
+  cliente: Cliente = new  Cliente();
+  fattura: Fattura[] = [];  
+  constructor(private clientiService: ClientiService, private route: ActivatedRoute, private router: Router) { }
 
   ngOnInit(): void {
-  }
+    this.route.params.subscribe(data => {
+      this.clientiService.getClienteById(data[('id')]).subscribe(response => this.cliente = response);    
+    });
 
+
+  /* this.clientiService.getByCliente(this.cliente).subscribe(data => {
+      this.fattura = data.content;
+      console.log(data.content)
+
+    }) */
+  }
 }

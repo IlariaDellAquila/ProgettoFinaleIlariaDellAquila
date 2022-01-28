@@ -1,7 +1,7 @@
 <div class="card my-3">
   <div class="card-header">
     <h3>{{cliente.nomeContatto}} {{cliente.cognomeContatto}}</h3>
-   
+    <button type="button" class="btn btn-primary my-2" (click)="fattureCliente(cliente)">VAI ALLE FATTURE</button>
   </div>
  
   <div class="card-body">
@@ -32,6 +32,5 @@
     
     <button type="button" class="form-control btn btn-secondary my-2"(click)="modifica(cliente)">Modifica</button>
     <button type="button" class="form-control btn btn-primary my-2"(click)="aggiungiFattura(cliente)">Aggiungi Fattura</button>
-    <button type="button" class="form-control btn btn-success my-2" (click)="fattureCliente(cliente)">VAI ALLE FATTURE</button>
   </div>
 </div>

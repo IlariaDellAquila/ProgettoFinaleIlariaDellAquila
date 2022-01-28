@@ -3,9 +3,11 @@ import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment';
 import { Cliente } from '../classes/cliente';
 import { Comune } from '../classes/comune';
+import { Fattura } from '../classes/fattura';
 import { Provincia } from '../classes/provincia';
 import { Clienti } from '../interfaces/clienti';
 import { Comuni } from '../interfaces/comuni';
+import { Fatture } from '../interfaces/fatture';
 import { Province } from '../interfaces/province';
 
 @Injectable({
@@ -60,5 +62,8 @@ export class ClientiService {
   createProvincia(provincia: Provincia){
     return this.http.post<Provincia>(environment.serverAdress + 'api/province', provincia)
   }
-
+  
+  getByCliente(id: number) {
+    return this.http.get<Fatture>(environment.serverAdress + 'api/fatture/cliente/'+ id +'?page=0&size=20&sort=id,DESC')
+    }
 }
