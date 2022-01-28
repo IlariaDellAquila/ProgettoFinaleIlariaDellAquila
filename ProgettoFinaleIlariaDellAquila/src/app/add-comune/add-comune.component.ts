@@ -24,8 +24,9 @@ export class AddComuneComponent implements OnInit {
   addComune(){
     this.clientiService.createComune(this.comune).subscribe(data => {
       this.comune= data;
+      this.router.navigate(['aggiungiClienti']);
      })
-     this.router.navigate(['aggiungiClienti']);
+
   }
 
 }

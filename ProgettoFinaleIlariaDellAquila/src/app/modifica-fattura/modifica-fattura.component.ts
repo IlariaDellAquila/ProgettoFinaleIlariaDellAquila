@@ -21,7 +21,9 @@ export class ModificaFatturaComponent implements OnInit {
 
   }
   update(){
-    this.fattureService.updateFattura(this.fattura).subscribe(response => this.fattura = response);
+    this.fattureService.updateFattura(this.fattura).subscribe(response => {
+    this.fattura = response;
     this.router.navigate(['fatture'])
+    }); 
   }
 }

@@ -34,8 +34,9 @@ export class AddClientiComponent implements OnInit {
     this.cliente.dataUltimoContatto = '2021-03-24T21:32:06.375+00:00';
     this.clientiService.createCliente(this.cliente).subscribe(data => {
      this.cliente= data;
+     this.router.navigate(['clienti']);
     })
-    this.router.navigate(['clienti']);
+
   }
 }
 

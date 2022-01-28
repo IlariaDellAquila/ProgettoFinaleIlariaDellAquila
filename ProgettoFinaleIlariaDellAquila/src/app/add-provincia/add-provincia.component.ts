@@ -20,9 +20,9 @@ export class AddProvinciaComponent implements OnInit {
   addProvincia() {
     this.clientiService.createProvincia(this.provincia).subscribe(data => {
       this.provincia = data;
-
+      this.router.navigate(['aggiungiComune']);
     });
-    this.router.navigate(['aggiungiComune']);
+
  
   }
 

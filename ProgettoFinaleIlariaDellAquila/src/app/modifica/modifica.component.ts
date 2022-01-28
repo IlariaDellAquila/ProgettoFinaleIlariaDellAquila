@@ -11,7 +11,7 @@ import { ClientiService } from '../services/clienti.service';
 })
 export class ModificaComponent implements OnInit {
   tipoCliente: string[] = [];
-  comuni: Comune [] = [];
+  comuni: Comune[] = [];
 
   cliente: Cliente = new Cliente();
 
@@ -25,15 +25,16 @@ export class ModificaComponent implements OnInit {
       this.comuni = data.content;
     });
     this.route.params.subscribe(data => {
-      this.clientiService.getClienteById(data['id']).subscribe(response => this.cliente= response)
+      this.clientiService.getClienteById(data['id']).subscribe(response => this.cliente = response)
     })
   }
 
-  update(){
-    
-      this.clientiService.updateCliente(this.cliente).subscribe(response => this.cliente = response);
-      this.router.navigate(['clienti'])
+  update() {
 
+    this.clientiService.updateCliente(this.cliente).subscribe(response => {
+      this.cliente = response
+      this.router.navigate(['clienti'])
+    });
   }
 
 
