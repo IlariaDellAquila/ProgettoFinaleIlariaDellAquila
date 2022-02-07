@@ -13,27 +13,23 @@ import { FattureService } from '../services/fatture.service';
 })
 export class AddFattureComponent implements OnInit {
   fattura: Fattura = new Fattura();
-
-  /*fatture = {"data":"2019-07-31T16:09:43.763+00:00","stato":{
-    "id": 2,
-    "nome": "NON PAGATA"
-  },
-  "cliente":{"id":1}}*/
+  fatture: StatoFattura[] = [];
 
   constructor(private route: ActivatedRoute, private fattureService: FattureService, private router: Router) { }
 
   ngOnInit(): void {
-    this.route.params.subscribe(data=> {
-      this.fattura.cliente.id = data['id']; 
-       })
+    this.route.params.subscribe(data => {
+      this.fattura.cliente.id = data['id'];
+    })
+    this.route.params.subscribe(data => {
+      this.fattureService.getAllStatoFattura().subscribe(response => this.fatture = response.content)
+    });
   }
 
   addFattura() {
-   this.fattura.data = "2019-07-31T16:09:43.763+00:00";
-   this.fattura.stato.id = 2;
-   this.fattura.stato.nome = "NON PAGATA";
-   this.fattureService.createFattura(this.fattura).subscribe();
-   this.router.navigate(['fatture']);
+    this.fattura.data = "2019-07-31T16:09:43.763+00:00";
+    this.fattureService.createFattura(this.fattura).subscribe();
+    this.router.navigate(['fatture']);
   }
 
 }

@@ -4,6 +4,7 @@ import { environment } from 'src/environments/environment';
 import { Fattura } from '../classes/fattura';
 import { StatoFattura } from '../classes/stato-fattura';
 import { Fatture } from '../interfaces/fatture';
+import { StatoFatture } from '../interfaces/stato-fatture';
 
 @Injectable({
   providedIn: 'root'
@@ -31,5 +32,8 @@ export class FattureService {
     return this.http.post<Fattura>(environment.serverAdress + 'api/fatture', fattura)
   }
 
+  getAllStatoFattura() {
+    return this.http.get<StatoFatture>(environment.serverAdress + 'api/statifattura?page=0&size=20&sort=id,ASC');
+  }
 
 }

@@ -83,6 +83,10 @@
                         name="nome_comune_SedeOperativa" class="mx-3">
                         <option [ngValue]="item" *ngFor="let item of comuni">{{item.nome}}</option>
                     </select>
+                   
+                </div>
+                <div class="col-sm">
+                    <a href="#" class="nav-link" [routerLink]="['/aggiungiComune']">Add Comune</a>
                 </div>
             </div>
             <div class="mb-3">
@@ -114,6 +118,9 @@
                             name="nome_comune_SedeLegale" class="mx-3">
                             <option [ngValue]="item" *ngFor="let item of comuni">{{item.nome}}</option>
                         </select>
+                    </div>
+                    <div class="col-sm">
+                        <a href="#" class="nav-link" [routerLink]="['/aggiungiComune']">Add Comune</a>
                     </div>
                 </div>
             </div>

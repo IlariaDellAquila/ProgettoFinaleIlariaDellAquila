@@ -13,6 +13,7 @@ export class AddComuneComponent implements OnInit {
 
   comune: Comune = new Comune();
   provincia: Provincia[] = [];
+  province: Provincia = new Provincia();
 
   constructor(private clientiService: ClientiService, private router: Router) { }
 
@@ -27,6 +28,13 @@ export class AddComuneComponent implements OnInit {
       this.router.navigate(['aggiungiClienti']);
      })
 
+  }
+  addProvincia() {
+    this.clientiService.createProvincia(this.province).subscribe(data => {
+      this.province = data;
+    });
+
+ 
   }
 
 }

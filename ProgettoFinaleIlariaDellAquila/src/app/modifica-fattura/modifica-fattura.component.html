@@ -19,7 +19,9 @@
         </div>
         <div class="mb-3">
             <label  class="form-label">Stato</label>
-            <input type="text" [(ngModel)]="fattura.stato.nome" name="stato_fattura" class="form-control"  placeholder="Stato">
+            <select class="form-select"  [(ngModel)]="fattura.stato" name="stato_fattura" [ngModelOptions]="{standalone: true}">
+                <option [ngValue]="item" *ngFor="let item of fatture"> {{item.nome}}</option>
+              </select>
         </div>
         <button type="button" class="form-control btn btn-secondary" (click)="update()">Modifica</button>
     </form>
