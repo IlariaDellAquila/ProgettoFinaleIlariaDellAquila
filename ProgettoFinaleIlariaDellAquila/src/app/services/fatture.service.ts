@@ -36,4 +36,7 @@ export class FattureService {
     return this.http.get<StatoFatture>(environment.serverAdress + 'api/statifattura?page=0&size=20&sort=id,ASC');
   }
 
+  getByCliente(id:number) {
+    return this.http.get<Fatture>(environment.serverAdress+'api/fatture/cliente/' + id +'?page=0size=20&sord=id,ASC')
+  }
 }

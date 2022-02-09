@@ -1,6 +1,7 @@
 <div class="card my-3">
   <div class="card-header">
     <h3>{{cliente.nomeContatto}} {{cliente.cognomeContatto}}</h3>
+    <a href="#" [routerLink]="['/fatture' ,cliente.id ,'fattureCliente']">Vai alle fatture</a>
   </div>
  
   <div class="card-body">
