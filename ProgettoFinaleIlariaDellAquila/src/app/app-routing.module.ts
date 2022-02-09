@@ -5,6 +5,7 @@ import { AddComuneComponent } from './add-comune/add-comune.component';
 import { AddFattureComponent } from './add-fatture/add-fatture.component';
 import { DettagliClientiComponent } from './dettagli-clienti/dettagli-clienti.component';
 import { DettagliFattureComponent } from './dettagli-fatture/dettagli-fatture.component';
+import { FattureClienteComponent } from './fatture-cliente/fatture-cliente.component';
 import { HomeComponent } from './home/home.component';
 import { ModificaFatturaComponent } from './modifica-fattura/modifica-fattura.component';
 import { ModificaComponent } from './modifica/modifica.component';
@@ -51,7 +52,11 @@ const routes: Routes = [
   {
     path:'aggiungiComune',
     component: AddComuneComponent
-  }
+  },
+  {
+    path:'fatture/:id/fattureCliente',
+    component:FattureClienteComponent
+  },
 ];
 
 @NgModule({
