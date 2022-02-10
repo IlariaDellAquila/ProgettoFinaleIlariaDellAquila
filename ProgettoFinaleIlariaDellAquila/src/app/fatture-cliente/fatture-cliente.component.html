@@ -9,6 +9,7 @@
           <th scope="col">Anno</th>
           <th scope="col">Importo</th>
           <th scope="col">Stato</th>
+          <th scope="col"></th>
         </tr>
         </thead>
         <tbody>
@@ -19,6 +20,9 @@
             <td>{{item.anno}}</td>
             <td>{{item.importo}}</td>
             <td>{{item.stato.nome}}</td>
+            <td>
+                <button type="button" class="btn btn-danger btn-sm mx-1" (click)="remove(item)"><i class="bi bi-file-excel-fill"></i></button>
+            </td> 
         </tr>
         </tbody>
     </table>

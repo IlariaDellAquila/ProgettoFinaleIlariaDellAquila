@@ -39,4 +39,9 @@ export class FattureService {
   getByCliente(id:number) {
     return this.http.get<Fatture>(environment.serverAdress+'api/fatture/cliente/' + id +'?page=0size=20&sord=id,ASC')
   }
+  removeByCliente(fattura: Fattura) {
+    return this.http.delete(environment.serverAdress + 'api/fatture/cliente/' + fattura.id)
+  }
+
+
 }

@@ -21,5 +21,12 @@ export class FattureClienteComponent implements OnInit {
       })
     })
   }
+  
+  remove(item: Fattura){
+    this.fattureService.removeByCliente(item).subscribe(data => {
+      this.fatture = this.fatture.filter(ele => ele !== item);
+    })
+
+  }
 
 }
