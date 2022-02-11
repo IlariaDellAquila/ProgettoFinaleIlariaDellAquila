@@ -1,0 +1,19 @@
+.card-header{
+    border: 1px solid cornflowerblue;
+    background-color: rgb(146, 220, 223);
+}
+.card-body{
+    border: 1px solid cornflowerblue;
+    background-color: rgb(188, 241, 243);
+}
+.btn-modifica{
+    border: 1px solid rgba(12, 69, 101, 0.8);
+    background:  cadetblue;
+    color: white;
+}
+.btn{
+    border: 1px solid rgba(12, 69, 101, 0.8);
+}
+.link{
+    color: black;
+}

@@ -3,29 +3,29 @@
 <form>
     <div class="mb-3">
         <label class="form-label">Nome Provincia</label>
-        <input type="text" [(ngModel)]="province.nome" name="nome" class="form-control">
+        <input type="text" [(ngModel)]="province.nome" name="nome" class="form-control" placeholder="Es: Avellino">
     </div>
     <div class="mb-3">
         <label class="form-label">Sigla</label>
-        <input type="text" [(ngModel)]="province.sigla" name="sigla" class="form-control">
+        <input type="text" [(ngModel)]="province.sigla" name="sigla" class="form-control" placeholder="Es: AV">
     </div>
-    <button type="button" class="btn btn-primary" (click)="addProvincia()">Aggiungi</button>
+    <button type="button" class="btn" (click)="addProvincia()"><b>Aggiungi Provincia</b></button>
 </form>
     <h1 class="text-center">Aggiungi Comune</h1>
 <form>
     <div class="mb-3">
         <label class="form-label">Comune</label>
-        <input type="text" [(ngModel)]="comune.nome" name="nome" class="form-control">
+        <input type="text" [(ngModel)]="comune.nome" name="nome" class="form-control" placeholder="Es: Manocalzati">
     </div>
     <div class="mb-3">
-        <label class="form-label">Provincia</label>
+        <label class="form-label">Provincia</label><br>
         <select class="p-2" [(ngModel)]="comune.provincia" name="provincia" [ngModelOptions]="{standalone: true}">
             <option [ngValue]="item" *ngFor="let item of provincia">
                 {{item.nome}}
             </option>
         </select>
     </div>
-    <button type="button" class="btn btn-primary" (click)="addComune()">Aggiungi</button>
+    <button type="button" class="btn" (click)="addComune()"><b>Aggiungi Comune</b></button>
 </form>
 
 </div>

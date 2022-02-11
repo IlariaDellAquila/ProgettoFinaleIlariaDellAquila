@@ -1,5 +1,5 @@
 <div class="my-3">
-    <h3 class="text-center">Modifica fattura</h3>
+    <h3 class="text-center titolo">Modifica fattura</h3>
     <form>
         <div class="mb-3">
             <label  class="form-label">Numero fattura</label>
@@ -18,11 +18,11 @@
             <input type="text" [(ngModel)]="fattura.anno" name="anno_fattura" class="form-control"  placeholder="Anno">
         </div>
         <div class="mb-3">
-            <label  class="form-label">Stato</label>
+            <label  class="form-label">Stato</label><br>
             <select class="form-select"  [(ngModel)]="fattura.stato" name="stato_fattura" [ngModelOptions]="{standalone: true}">
                 <option [ngValue]="item" *ngFor="let item of fatture"> {{item.nome}}</option>
               </select>
         </div>
-        <button type="button" class="form-control btn btn-secondary" (click)="update()">Modifica</button>
+        <button type="button" class="form-control btn" (click)="update()">Modifica</button>
     </form>
 </div>

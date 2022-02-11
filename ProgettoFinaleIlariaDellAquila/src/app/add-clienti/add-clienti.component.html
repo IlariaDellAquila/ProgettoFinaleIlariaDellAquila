@@ -1,5 +1,5 @@
 <div class="my-3">
-    <h3 class="text-center">Aggiungi un nuovo cliente</h3>
+    <h3 class="text-center titolo">Aggiungi un nuovo cliente</h3>
     <form>
         <div class="mb-3">
             <label class="form-label">Nome Cliente</label>
@@ -86,7 +86,7 @@
                    
                 </div>
                 <div class="col-sm">
-                    <a href="#" class="nav-link" [routerLink]="['/aggiungiComune']">Add Comune</a>
+                    <a href="#" class="nav-link" [routerLink]="['/aggiungiComune']">Add Comune<i class="bi bi-caret-right-fill"></i></a>
                 </div>
             </div>
             <div class="mb-3">
@@ -120,7 +120,7 @@
                         </select>
                     </div>
                     <div class="col-sm">
-                        <a href="#" class="nav-link" [routerLink]="['/aggiungiComune']">Add Comune</a>
+                        <a href="#" class="nav-link" [routerLink]="['/aggiungiComune']">Add Comune<i class="bi bi-caret-right-fill"></i></a>
                     </div>
                 </div>
             </div>
@@ -135,7 +135,7 @@
                     placeholder="Es: 2019-06-01T08:11:01.911+00:00">
             </div>
 
-            <button type="button" class="form-control btn btn-secondary" (click)="addCliente()">Aggiungi</button>
+            <button type="button" class="form-control btn" (click)="addCliente()"><b>Aggiungi</b></button>
         </div>
     </form>
 </div>
