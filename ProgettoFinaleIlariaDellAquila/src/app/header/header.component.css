@@ -7,3 +7,6 @@
 .nav-link{
     color: rgba(9, 46, 68, 0.8);
 }
+.navbar-toggler{
+    background: rgba(9, 46, 68, 0.8);
+}
